@@ -1,0 +1,198 @@
+{
+	"info": {
+		"_postman_id": "0cb3aa9d-1e50-4248-834f-2c2f6c778862",
+		"name": "Trabalho Final COM222",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Refeicao",
+			"item": [
+				{
+					"name": "Create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"principal\":[\"Arroz/Feijão\", \"Arroz Integral/Feijão\", \"Arroz\"],\r\n    \"carne\":[\"Maminha\", \"Picanha\"],\r\n    \"acompanhamento\":[\"Fritas\", \"Batata Sotiê\"]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/refeicao",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"refeicao"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Read",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/refeicao/:id",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"refeicao",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "5effd1c5b2dfe746a43f0d01"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"principal\":[\"Arroz/Feijão\", \"Arroz Integral/Feijão\", \"Arroz\"],\r\n    \"carne\":[\"Maminha\", \"Picanha\"],\r\n    \"acompanhamento\":[\"Fritas\", \"Batata Sotiê\", \"Salada\", \"Farofa\"]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/refeicao/:id",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"refeicao",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "5effd1c5b2dfe746a43f0d01"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/refeicao/:id",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"refeicao",
+								":id"
+							],
+							"query": [
+								{
+									"key": "",
+									"value": null,
+									"disabled": true
+								}
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "5effd1c5b2dfe746a43f0d01"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Pedido",
+			"item": [
+				{
+					"name": "Create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"refeicoes\": [{\r\n        \"principal\": \"Arroz/Feijão\",\r\n        \"carne\": \"Maminha\",\r\n        \"acompanhamento\": \"Farofinha hmmm\"\r\n    },{\r\n        \"principal\": \"Arroz Integral\",\r\n        \"carne\": \"Frango\",\r\n        \"acompanhamento\": \"batatinha\"\r\n    }],\r\n  \"bebida\": [\"Coquinha\", \"Sucão\"],\r\n  \"sobremesa\": [\"Petit Gateau\", \"Sovete\"],\r\n  \"valorTotal\": 200.99\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/pedido",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"pedido"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Read",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/pedido/:id",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"pedido",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "5effd862a2e96616e8e3b02e"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		}
+	],
+	"protocolProfileBehavior": {}
+}
