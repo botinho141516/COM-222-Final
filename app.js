@@ -1,10 +1,13 @@
 import express from 'express';
 import { urlencoded, json } from 'body-parser';
 import cors from 'cors';
+import mongoose from 'mongoose';
+import Routes from './routes';
+
+mongoose.connect('mongodb://localhost:27017/trabalho-final-5610-5585');
 
 require('dotenv').config();
 // const jwt = require('jsonwebtoken');
-
 
 const app = express();
 
@@ -27,10 +30,6 @@ app.get('/', (req, res) => {
   res.sendStatus(418);
 });
 
-app.get('/whoami', (req, res) => {
-  res.send({
-    purpouseInLife: 'Be an API for IoT applications for the distributed Systems class',
-  });
-});
+app.use(Routes);
 
 export default app;
