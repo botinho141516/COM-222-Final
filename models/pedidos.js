@@ -3,8 +3,8 @@ import mongoose from 'mongoose';
 const PedidosSchema = new mongoose.Schema({
   refeicoes: [{
     principal: [String],
-    carne: [String],
-    acompanhamento: [String],
+    carnes: [String],
+    acompanhamentos: [String],
   }],
   bebida: [String],
   sobremesa: [String],

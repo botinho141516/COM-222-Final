@@ -3,11 +3,11 @@ import { sendError, sendSuccess } from '../../helpers/util';
 
 export default (req, res) => {
   const {
-    principal, carne, acompanhamento,
+    principal, carnes, acompanhamentos,
   } = req.body;
 
   Refeicoes.create({
-    principal, carne, acompanhamento,
+    principal, carnes, acompanhamentos,
   }, (err, doc) => {
     if (err) sendError(res, err);
     else {
